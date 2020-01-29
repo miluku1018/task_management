@@ -1,24 +1,8 @@
-# README
+#  新進工程師訓練教材: 後端
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 專案目的
+開發一套『任務管理系統』。
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Table schema
+![imgae](https://github.com/miluku1018/task_management/blob/master/table%20schema.png)
