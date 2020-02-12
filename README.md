@@ -5,4 +5,4 @@
 
 
 ## Table schema
-![imgae](https://github.com/miluku1018/task_management/blob/master/table%20schema.png)
+![imgae](https://github.com/miluku1018/task_management/blob/master/task_ma3.draw.png)
