@@ -15,49 +15,6 @@ ActiveRecord::Schema.define(version: 2020_02_13_102220) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "boards", force: :cascade do |t|
-    t.string "title"
-    t.string "status"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "card_tags", force: :cascade do |t|
-    t.bigint "card_id", null: false
-    t.bigint "tag_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["card_id"], name: "index_card_tags_on_card_id"
-    t.index ["tag_id"], name: "index_card_tags_on_tag_id"
-  end
-
-  create_table "cards", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.string "priority"
-    t.date "start_date"
-    t.date "due_date"
-    t.bigint "list_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["list_id"], name: "index_cards_on_list_id"
-  end
-
-  create_table "lists", force: :cascade do |t|
-    t.string "title"
-    t.bigint "board_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["board_id"], name: "index_lists_on_board_id"
-  end
-
-  create_table "tags", force: :cascade do |t|
-    t.string "title"
-    t.string "color"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "tasks", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -68,27 +25,4 @@ ActiveRecord::Schema.define(version: 2020_02_13_102220) do
     t.date "end_at"
   end
 
-  create_table "user_boards", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "board_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["board_id"], name: "index_user_boards_on_board_id"
-    t.index ["user_id"], name: "index_user_boards_on_user_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.integer "password"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  add_foreign_key "card_tags", "cards"
-  add_foreign_key "card_tags", "tags"
-  add_foreign_key "cards", "lists"
-  add_foreign_key "lists", "boards"
-  add_foreign_key "user_boards", "boards"
-  add_foreign_key "user_boards", "users"
 end
