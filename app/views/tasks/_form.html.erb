@@ -15,7 +15,7 @@
 <%=f.text_area :description %><br>
 
 <%=f.label :priority, "優先度"%>
-<%=f.text_field :priority %><br>
+<%=f.select :priority, Task.priorities.keys %><br>
 
 <%=f.label :start_at, "起始日"%>
 <%=f.date_field :start_at %><br>
