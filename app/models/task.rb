@@ -1,3 +1,3 @@
 class Task < ApplicationRecord
-  enum priority: { 低: 2, 中: 1, 高: 0 }
+  enum priority: { low: 2, medium: 1, high: 0 }
 end
