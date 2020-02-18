@@ -1,0 +1,11 @@
+<h1>任務名稱：<%= @task.title %></h1>
+<ul>
+  <li>任務描述：<%= @task.description %></li>
+  <li>優先度：<%= @task.priority %></li>
+  <li>起始日：<%= @task.start_at %></li>
+  <li>截止日：<%= @task.end_at %></li>
+</ul>
+
+<br>
+
+<%= link_to "回任務列表", root_path %>
