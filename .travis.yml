@@ -1,11 +1,23 @@
 # .travis.yml
 
 language: ruby
+cache:
+  bundler: true
+  yarn: true
+  directories:
+    - node_modules
 rvm:
 - 2.6.3
-install: bundle install
-services:
-  - postgresql
+install:
+  - bundle install
+  - nvm install node
+  - node -v
+  - npm i -g yarn
+  - yarn install
+before_script:
+  - bundle exec rake db:create db:test:prepare
 script:
-  - bundle exec rake db:migrate:reset RAILS_ENV=test
-  - bundle exec rspec
+  - yarn test
+  - bundle exec rspec spec
+after_success:
+  - bundle exec rake assets:precompile
