@@ -33,4 +33,4 @@ install:
 
 script:
   - bundle exec rails webpacker:compile
-  - bundle exec rails rspec
+  - bundle exec rspec
