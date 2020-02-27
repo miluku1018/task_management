@@ -33,11 +33,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.9'
-  gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
   gem 'faker', '~> 2.10', '>= 2.10.2'
   gem 'hirb', '~> 0.7.3'
   gem 'spring-commands-rspec', '~> 1.0', '>= 1.0.4'
   gem 'database_cleaner', '~> 1.8', '>= 1.8.3'
+  gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
 end
 
 group :development do
