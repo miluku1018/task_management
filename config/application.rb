@@ -11,6 +11,10 @@ module TaskManagement
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
     
+    config.i18n.default_locale = "zh-TW"
+    
+    config.time_zone = "Taipei"
+
     config.generators do |g|
       g.helper false
       g.test_framework false

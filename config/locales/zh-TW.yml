@@ -1,0 +1,25 @@
+"zh-TW":
+  tasks:
+    create: 
+      create_info: "已新增任務"
+    update:
+      update_info: "已更新任務"
+    destroy:
+      delete_info: "已刪除任務"
+    priority:
+      low: "低"
+      medium: "中"
+      high: "高"    
+  title: "任務名稱"
+  description: "任務描述"
+  priority: "優先度"
+  start_at: "起始日"
+  end_at: "截止日"
+  submit: "送出" 
+  back_to_homepage: "回首頁"
+  task_list: "任務列表"  
+  create_task: "新增任務"   
+  edit_task: "編輯任務"
+  edit: "編輯"
+  delete: "刪除"
+  confirm_delete: "確認刪除?!"
