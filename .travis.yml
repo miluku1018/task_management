@@ -27,7 +27,6 @@ cache:
 install:
   - bundle install
   - nvm install node
-  - npm i -g yarn
 
 script:
   - bundle exec rails webpacker:compile
