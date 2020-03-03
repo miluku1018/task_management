@@ -29,5 +29,5 @@ install:
   - nvm install node
 
 script:
-  - bundle exec rails webpacker:compile
+  - RAILS_ENV=test bundle exec rails webpacker:compile
   - bundle exec rspec
