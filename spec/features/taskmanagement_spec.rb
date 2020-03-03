@@ -44,7 +44,7 @@ RSpec.feature "Taskmanagements", type: :feature do
       fill_in "任務描述", with: "訂東京奧運機票"
       click_button "送出"
 
-      expect(page).to have_text "更新成功"
+      expect(page).to have_text "已更新任務"
       expect(page).to have_text "任務列表"
       expect(page).to have_text "新增任務"
       expect(page).to have_text "訂機票"
@@ -58,7 +58,7 @@ RSpec.feature "Taskmanagements", type: :feature do
       
       expect{ click_link "刪除" }.to change(Task, :count).by(-1)
 
-      expect(page).to have_text "刪除成功"
+      expect(page).to have_text "已刪除任務"
     end
   end
 end
