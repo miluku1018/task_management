@@ -15,9 +15,6 @@ addons:
 before_install:
   - export DISPLAY=:99.0
 
-before_script:
-  - bundle exec rake db:create db:migrate RAILS_ENV=test
-
 cache:
   bundler: true
   directories:
@@ -29,5 +26,5 @@ install:
   - nvm install node
 
 script:
-  - RAILS_ENV=test bundle exec rails webpacker:compile
+  - bundle exec rails db:reset db:setup db:migrate RAILS_ENV=test
   - bundle exec rspec
