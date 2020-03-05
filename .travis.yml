@@ -30,5 +30,4 @@ install:
   - yarn
 
 script:
-  - bundle exec rails webpacker:compile
   - bundle exec rspec
