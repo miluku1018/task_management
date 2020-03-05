@@ -1,5 +1,4 @@
 # .travis.yml
-
 language: ruby
 
 rvm:
@@ -27,6 +26,8 @@ cache:
 install:
   - bundle install
   - nvm install node
+  - npm i -g yarn
+  - yarn
 
 script:
   - bundle exec rails webpacker:compile
