@@ -61,4 +61,15 @@ RSpec.feature "Taskmanagements", type: :feature do
       expect(page).to have_text "已刪除任務"
     end
   end
+
+  context "task ordered by created at" do 
+    scenario "按建立時間排序任務" do 
+      task1 = Task.create(title: '訂機票')
+      task2 = Task.create(title: '訂東京奧運門票')
+      visit root_path
+      
+      expect(find('table tr:nth-child(1)')).to have_content('訂東京奧運門票')
+      expect(find('table tr:nth-child(2)')).to have_content('訂機票')
+    end
+  end
 end
