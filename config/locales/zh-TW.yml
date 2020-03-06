@@ -9,7 +9,8 @@
     priority:
       low: "低"
       medium: "中"
-      high: "高"    
+      high: "高"  
+   
   title: "任務名稱"
   description: "任務描述"
   priority: "優先度"
@@ -23,3 +24,16 @@
   edit: "編輯"
   delete: "刪除"
   confirm_delete: "確認刪除?!"
+  activerecord:
+    errors:
+      models:
+        task:
+          attributes:
+            title: 
+              blank: "欄位不能空白！"
+            description:
+              blank: "欄位不能空白！"
+    attributes:
+      task:
+        title: "任務名稱"
+        description: "任務描述"

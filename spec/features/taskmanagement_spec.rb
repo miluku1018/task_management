@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.feature "Taskmanagements", type: :feature do
-
   scenario "creates a new task" do 
 
     visit root_path
@@ -68,8 +67,8 @@ RSpec.feature "Taskmanagements", type: :feature do
       task2 = Task.create(title: '訂東京奧運門票')
       visit root_path
       
-      expect(find('table tr:nth-child(1)')).to have_content('訂東京奧運門票')
-      expect(find('table tr:nth-child(2)')).to have_content('訂機票')
+      expect(find('table tr:nth-child(1)')).to have_text "訂東京奧運門票"
+      expect(find('table tr:nth-child(2)')).to have_text "訂機票"
     end
   end
 end
