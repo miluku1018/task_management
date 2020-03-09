@@ -4,10 +4,10 @@ require 'rails_helper'
 RSpec.describe Task, type: :model do
   it "任務名稱與任務描述為必填" do
     task = Task.new(
-      title: "訂東京飯店",
-      description: "距離東京地鐵附近的飯店",
+      title: " ",
+      description: " ",
     )
 
-    expect(task).to be_valid
+    expect(task).to be_invalid
   end
 end
