@@ -14,7 +14,7 @@ class TasksController < ApplicationController
     if @task.save
       redirect_to root_path, notice: t('.create_info')
     else
-      reneder :new
+      render :new
     end
   end
 

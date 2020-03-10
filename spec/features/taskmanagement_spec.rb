@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.feature "Taskmanagements", type: :feature do
-
   scenario "creates a new task" do 
 
     visit root_path
@@ -64,12 +63,13 @@ RSpec.feature "Taskmanagements", type: :feature do
 
   context "task ordered by created at" do 
     scenario "按建立時間排序任務" do 
-      task1 = Task.create(title: '訂機票')
-      task2 = Task.create(title: '訂東京奧運門票')
-      visit root_path
+      task1 = Task.create(title: '訂機票', description:'訂東京奧運來回機票')
+      task2 = Task.create(title: '訂東京奧運門票', description:'買兩張東京奧運門票')
       
-      expect(find('table tr:nth-child(1)')).to have_content('訂東京奧運門票')
-      expect(find('table tr:nth-child(2)')).to have_content('訂機票')
+      visit root_path
+    
+      expect(find('table tr:nth-child(1)')).to have_text "訂東京奧運門票"
+      expect(find('table tr:nth-child(2)')).to have_text "訂機票"
     end
   end
 end
