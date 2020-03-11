@@ -14,3 +14,9 @@
 4. heroku create 在Heroku開一個伺服器
 5. git remote -v 可以看到有hook
 6. git push heroku master 推上去Heroku
+
+## 版號
+rails-6.0.2.1
+ruby-2.6.3
+node-12.13.1
+
