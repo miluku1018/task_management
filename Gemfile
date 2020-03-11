@@ -38,6 +38,7 @@ group :development, :test do
   gem 'spring-commands-rspec', '~> 1.0', '>= 1.0.4'
   gem 'database_cleaner', '~> 1.8', '>= 1.8.3'
   gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
+  gem 'foreman', '~> 0.87.0'
 end
 
 group :development do
