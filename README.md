@@ -18,6 +18,8 @@ Heroku: <https://nameless-shore-42373.herokuapp.com/>
 
 ## 版號
 rails-6.0.2.1
+
 ruby-2.6.3
+
 node-12.13.1
 

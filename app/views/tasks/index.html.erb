@@ -3,13 +3,24 @@
 <%= link_to t(:create_task), new_task_path %>
 
 <table>
-  <% @tasks.each do |task|%>
+  <thead>
     <tr>
-      <td>
-        <%= link_to task.title, task_path(task) %>
-        <%= link_to t(:edit), edit_task_path(task) %>
-        <%= link_to t(:delete), task_path(task), method: "delete", data: {confirm: t(:confirm_delete)} %>
-      </td>
+      <td><%= t(:title) %></td>
+      <td><%= link_to t(:end_at), end_at_order %></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
-  <% end %>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task|%>
+      <tr>
+        <td><%= link_to task.title, task_path(task) %></td>
+        <td><%= task.end_at %></td>
+        <td><%= link_to t(:edit), edit_task_path(task) %></td>
+        <td><%= link_to t(:delete), task_path(task), method: "delete", data: {confirm: t(:confirm_delete)} %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
