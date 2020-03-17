@@ -2,15 +2,20 @@
 
 <%= link_to t(:create_task), new_task_path %>
 
+<p>選擇排序方式</p>
+<ul>
+  <li><%= link_to t(:created_at), tasks_path(sort_by: "created_at") %></li>
+  <li><%= link_to t(:end_at), tasks_path(sort_by: "end_at") %></li>
+</ul>
 <table>
   <thead>
     <tr>
-      <td><%= t(:title) %></td>
-      <td><%= link_to t(:end_at), end_at_order %></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th><%= t(:title) %></td>
+      <th><%= t(:end_at) %></td>
+      <th></td>
+      <th></td>
+      <th></td>
+      <th></th>
     </tr>
   </thead>
   <tbody>

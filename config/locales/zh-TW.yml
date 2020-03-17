@@ -16,6 +16,7 @@
   priority: "優先度"
   start_at: "起始日"
   end_at: "截止日"
+  created_at: "建立日"
   submit: "送出" 
   back_to_homepage: "回首頁"
   task_list: "任務列表"  

@@ -83,11 +83,6 @@ RSpec.feature "Taskmanagements", type: :feature do
     
       expect(find('table tbody tr:nth-child(1)')).to have_text "取消機票"
       expect(find('table tbody tr:nth-child(2)')).to have_text "取消東京奧運門票"
-
-      click_link I18n.t(:end_at)
-      
-      expect(find('table tbody tr:nth-child(1)')).to have_text "取消東京奧運門票"
-      expect(find('table tbody tr:nth-child(2)')).to have_text "取消機票"
     end
   end
 
