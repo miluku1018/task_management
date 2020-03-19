@@ -4,7 +4,7 @@ module ApplicationHelper
   
     case column 
     when sort_column
-      css_class = "current #{sort_direction}"
+      css_class = "#{sort_direction}"
     else
       css_class = nil 
     end   
