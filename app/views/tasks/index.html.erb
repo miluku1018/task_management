@@ -6,9 +6,8 @@
   <thead>
     <tr>
       <th><%= t(:title) %></th>
-      <th><%= sortable "end_at", t(:end_at) %></th>
-      <th><%= sortable "created_at", t(:created_at) %></th>
-      <th></th>
+      <th><%= link_to t(:end_at), sortable %></th>
+      <th><%= t(:created_at) %></th>
       <th></th>
       <th></th>
       <th></th>
