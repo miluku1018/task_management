@@ -1,9 +1,18 @@
 module TasksHelper
-  def sortable(column)
-    if params[:sort] == 'end_at_asc'
-      tasks_path(:sort => "#{column}_desc")
+  def sortable(column, title)
+    if params[:sort] == "#{column}_asc"
+      symbol = '▼'
     else
-      tasks_path(:sort => "#{column}_asc")
+      symbol = '▲'
     end
+    
+    if params[:sort] == "#{column}_asc"
+      direction = "#{column}_desc"
+    else
+      direction = "#{column}_asc"
+    end
+
+    link_to title+symbol, {:sort => direction}
   end
 end
+
