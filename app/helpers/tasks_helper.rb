@@ -2,9 +2,9 @@ module TasksHelper
   def sortable(column, title)
     case params[:sort]
     when "#{column}_asc"
-      symbol = '▼'
-    when "#{column}_desc"
       symbol = '▲'
+    when "#{column}_desc"
+      symbol = '▼'
     else
       symbol = ''
     end
