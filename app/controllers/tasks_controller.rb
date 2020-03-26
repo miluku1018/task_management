@@ -1,7 +1,8 @@
 class TasksController < ApplicationController
   before_action :find_task, only: [:edit, :update, :show, :destroy]
+  
   def index
-   @tasks = Task.order(created_at: :desc)
+    @tasks = Task.order(sort_by)
   end
 
   def new
@@ -44,5 +45,18 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:title, :description, :priority, :start_at, :end_at)
+  end
+
+  def sort_by
+    case params[:sort]
+    when "end_at_desc"
+      sort_by = "end_at DESC"
+    when "end_at_asc"
+      sort_by = "end_at ASC"
+    when "created_at_asc"
+      sort_by = "created_at ASC"
+    else 
+      sort_by = "created_at DESC"
+    end
   end
 end

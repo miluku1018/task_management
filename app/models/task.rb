@@ -4,7 +4,7 @@ class Task < ApplicationRecord
   def self.select_options_by_priority
     priorities.keys.map{|x| [I18n.t("tasks.priority.#{x}"), x]}
   end
-  
+
   #validations
   validates :title, :description, presence: true
 end

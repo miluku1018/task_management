@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
   before_action :set_locale
- 
 
   private
     def record_not_found

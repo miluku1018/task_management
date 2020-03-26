@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+ th .asc:after {
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid #333;
+  position: absolute;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
+th .desc:after {
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid #333;
+  position: absolute;
+  margin-top: 7px;
+  margin-left: 5px;
+}
