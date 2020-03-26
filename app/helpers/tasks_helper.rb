@@ -1,11 +1,14 @@
 module TasksHelper
   def sortable(column, title)
-    if params[:sort] == "#{column}_asc"
+    case params[:sort]
+    when "#{column}_asc"
       symbol = '▼'
-    else
+    when "#{column}_desc"
       symbol = '▲'
+    else
+      symbol = ''
     end
-    
+
     if params[:sort] == "#{column}_asc"
       direction = "#{column}_desc"
     else

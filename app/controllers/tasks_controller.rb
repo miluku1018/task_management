@@ -53,6 +53,8 @@ class TasksController < ApplicationController
       sort_by = "end_at DESC"
     when "end_at_asc"
       sort_by = "end_at ASC"
+    when "created_at_asc"
+      sort_by = "created_at ASC"
     else 
       sort_by = "created_at DESC"
     end
